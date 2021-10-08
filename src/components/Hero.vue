@@ -1,6 +1,11 @@
 <template>
 	<div class="hero">
-		<vueper-slides :arrows="false" fixed-height="85vh" class="no-hover">
+		<vueper-slides
+			:arrows="false"
+			fixed-height="85vh"
+			class="no-hover"
+			:breakpoints="breakpoints"
+		>
 			<vueper-slide
 				v-for="i in slides"
 				:key="i"
@@ -29,6 +34,12 @@ export default {
 	},
 	data() {
 		return {
+			breakpoints: {
+				900: {
+					visibleSlides: "1",
+					fixedHeight: "45vh",
+				},
+			},
 			slides: [
 				{
 					image: require("../assets/Hero/bg-1.png"),
