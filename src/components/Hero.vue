@@ -38,6 +38,7 @@ export default {
 				900: {
 					visibleSlides: "1",
 					fixedHeight: "45vh",
+					touchable: false,
 				},
 			},
 			slides: [
