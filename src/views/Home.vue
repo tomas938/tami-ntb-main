@@ -544,13 +544,83 @@ export default {
 }
 .vueperslides__bullets {
 	bottom: 5rem;
+	@media only screen and (max-width: 900px) {
+		bottom: 0rem;
+	}
 }
+
+// HERO Carousel //
+
 .hero {
 	.vueperslide {
 		background-size: cover;
 		&::before {
 			display: none;
 		}
+		// &__title {
+		// 	text-align: left;
+		// 	line-height: 15rem;
+		// 	text-transform: none;
+		// 	font-size: 17rem;
+		// 	font-family: var(--hero-heading);
+		// 	font-weight: 600;
+		// 	color: white;
+		// 	text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+		// 	top: 51%;
+		// 	bottom: 0%;
+		// 	transform: translateY(-50%);
+		// 	left: 13%;
+		// 	@media only screen and (max-width: 900px) {
+		// 		font-size: 8rem;
+		// 		line-height: 8rem;
+		// 	}
+		// 	@media only screen and (max-width: 360px) {
+		// 		left: 7%;
+		// 	}
+		// }
+		// &__content {
+		// 	color: var(--dark-blue);
+		// 	font-weight: bold;
+		// 	font-size: 4.8rem;
+		// 	position: absolute;
+		// 	left: 14%;
+		// 	top: 68%;
+		// @media only screen and (max-width: 800px) {
+		// 	font-size: 2.8rem;
+		// }
+		// }
+		&__title {
+			position: relative;
+			text-align: left;
+			line-height: 15rem;
+			text-transform: none;
+			font-size: 17rem;
+			font-family: var(--hero-heading);
+			font-weight: 600;
+			color: white;
+			text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+			margin-bottom: 0;
+			bottom: 0%;
+			@media only screen and (max-width: 900px) {
+				font-size: 8rem;
+				line-height: 8rem;
+			}
+		}
+		&__content {
+			color: var(--dark-blue);
+			font-weight: bold;
+			font-size: 4.8rem;
+			@media only screen and (max-width: 800px) {
+				font-size: 2.8rem;
+			}
+		}
+	}
+	.vueperslide__content-wrapper:not(.vueperslide__content-wrapper--outside-top):not(.vueperslide__content-wrapper--outside-bottom) {
+		display: flex;
+		align-items: flex-start;
+		position: absolute;
+		left: 25%;
+		transform: translateX(-25%);
 	}
 }
 </style>
